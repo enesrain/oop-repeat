@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+  </head>
+  <body>
+    
+
+   
+
+    <script>
+
+//  es5 nesne oluşturma yöntemi :  
+     function Obj (ozellik1,ozellik2) {
+        this.ozellik1 = ozellik1;
+        this.ozellik2 = ozellik2;
+        this.methot = function() {
+            console.log(this.ozellik1 + " " + this.ozellik2);
+        }
+     }
+
+     const yeni_obje = new Obj("bmw",100000);
+     yeni_obje.methot();
+    
+
+
+// es6 da nesne oluşturma : 
+  class Obj2 {
+
+        constructor(ozellik1,ozellik2){
+            this.ozellik1 = ozellik1;
+            this.ozellik2 = ozellik2;
+        }    
+        methot(){
+            console.log(this.ozellik1 + " " + this.ozellik2);
+        }
+  }
+
+  const insan = new Obj2("Mehmet",30);
+  insan.methot();
+ 
+
+
+//   grilen 2 sayının aralığında random sayı üreten nesne
+
+  class Rasgele {
+
+    constructor(s1,s2){
+        this.s1 = s1;
+        this.s2 = s2;
+    }
+    random(){
+        // s1 dahil , s2 dahil değil
+  alert(Math.floor((Math.random() * (this.s2-this.s1)) + this.s1));
+}
+  }
+
+   let deger1 = prompt("Rasgele sayı üretmek için başlangıç sayısını gir:");
+
+   let deger2 = prompt("Rasgele sayı üretmek için bitiş sayısını gir:");
+   let say1 = Number(deger1);
+  let say2 = Number(deger2);
+
+   const rnd = new Rasgele(say1,say2);
+   rnd.random();
+
+
+//    alert(Math.floor((Math.random() * (b-a)) + a));
+
+</script>
+  </body>
+</html>
+
